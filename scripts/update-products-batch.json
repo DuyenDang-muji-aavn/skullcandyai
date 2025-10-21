@@ -1,0 +1,349 @@
+{
+  "updates": [
+    {
+      "id": 100,
+      "data": {
+        "name": "Cryptic Hacker",
+        "price": 3.75,
+        "creator": "CodeMaster",
+        "tags": ["tech", "cyber", "hacker", "digital"],
+        "rating": 4.5,
+        "stockQuantity": 145,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      }
+    },
+    {
+      "id": 101,
+      "data": {
+        "name": "Frosty Snow Queen",
+        "price": 4.20,
+        "tags": ["winter", "queen", "snow", "Season Choice"],
+        "rating": 4.8,
+        "stockQuantity": 132,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "WinterWhisper"
+      }
+    },
+    {
+      "id": 102,
+      "data": {
+        "name": "Spooky Halloween Ghost",
+        "price": 1.85,
+        "tags": ["halloween", "ghost", "spooky", "Season Choice"],
+        "rating": 4.3,
+        "stockQuantity": 178,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "PhantomArtist"
+      }
+    },
+    {
+      "id": 103,
+      "data": {
+        "name": "Lunar Moon Queen",
+        "price": 2.90,
+        "tags": ["moon", "celestial", "queen", "night"],
+        "rating": 4.7,
+        "stockQuantity": 98,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "CelestialDream"
+      }
+    },
+    {
+      "id": 104,
+      "data": {
+        "name": "Jolly Christmas Elf",
+        "price": 2.20,
+        "tags": ["xmas", "elf", "holiday", "Season Choice"],
+        "rating": 4.6,
+        "stockQuantity": 165,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "HolidayJoy"
+      }
+    },
+    {
+      "id": 105,
+      "data": {
+        "name": "Galactic Astronaut",
+        "price": 3.00,
+        "tags": ["space", "astronaut", "galaxy", "sci-fi"],
+        "rating": 4.9,
+        "stockQuantity": 87,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "SpaceExplorer"
+      }
+    },
+    {
+      "id": 106,
+      "data": {
+        "name": "Rustic Farmer",
+        "price": 1.50,
+        "tags": ["farm", "rustic", "nature", "earth"],
+        "rating": 4.2,
+        "stockQuantity": 203,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "EarthBound"
+      }
+    },
+    {
+      "id": 107,
+      "data": {
+        "name": "Athletic Tennis Girl",
+        "price": 2.75,
+        "tags": ["sporty", "tennis", "athletic", "girl"],
+        "rating": 4.5,
+        "stockQuantity": 154,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "SportyStyle"
+      }
+    },
+    {
+      "id": 108,
+      "data": {
+        "name": "Grapevine Wine Monster",
+        "price": 2.00,
+        "tags": ["wine", "grape", "monster", "Season Choice"],
+        "rating": 4.4,
+        "stockQuantity": 119,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "VinoVibes"
+      }
+    },
+    {
+      "id": 109,
+      "data": {
+        "name": "Regal Rose Lord",
+        "price": 3.50,
+        "tags": ["rose", "floral", "regal", "elegant"],
+        "rating": 4.8,
+        "stockQuantity": 76,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "FloralMajesty"
+      }
+    },
+    {
+      "id": 110,
+      "data": {
+        "name": "Skateboard Boy",
+        "price": 1.95,
+        "tags": ["skateboard", "urban", "sporty", "boy"],
+        "rating": 4.3,
+        "stockQuantity": 188,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "UrbanMotion"
+      }
+    },
+    {
+      "id": 111,
+      "data": {
+        "name": "Oceanic Sea Princess",
+        "price": 3.35,
+        "tags": ["ocean", "sea", "princess", "aqua"],
+        "rating": 4.7,
+        "stockQuantity": 142,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "AquaDreamer"
+      }
+    },
+    {
+      "id": 113,
+      "data": {
+        "name": "Joyful Ice Cream Lover",
+        "price": 2.99,
+        "tags": ["ice cream", "sweet", "summer", "joyful"],
+        "rating": 4.9,
+        "stockQuantity": 167,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "SweetTreats"
+      }
+    },
+    {
+      "id": 114,
+      "data": {
+        "name": "Daring Pilot Captain",
+        "price": 4.00,
+        "tags": ["pilot", "aviation", "captain", "sky"],
+        "rating": 4.6,
+        "stockQuantity": 91,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "SkyNavigator"
+      }
+    },
+    {
+      "id": 115,
+      "data": {
+        "name": "Charming Valentine Cupid",
+        "price": 3.60,
+        "tags": ["valentine", "cupid", "love", "Season Choice"],
+        "rating": 5.0,
+        "stockQuantity": 112,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false,
+        "creator": "LoveArtisan"
+      }
+    },
+    {
+      "id": 116,
+      "data": {
+        "name": "Santa Claus is coming",
+        "price": 5.80,
+        "creator": "HolidayJoy",
+        "tags": ["santa", "xmas", "cute"],
+        "rating": 4.5,
+        "stockQuantity": 164,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      }
+    },
+    {
+      "id": 117,
+      "data": {
+        "name": "Peter Pan",
+        "price": 2.58,
+        "creator": "TimelessTales",
+        "tags": ["camping", "xmas", "Season Choice", "boy"],
+        "rating": 4.5,
+        "stockQuantity": 17,
+        "stockStatus": "LOW_STOCK",
+        "isAvailable": true,
+        "isLowStock": true,
+        "isOutOfStock": false
+      }
+    },
+    {
+      "id": 118,
+      "data": {
+        "name": "Santa claus",
+        "price": 3.20,
+        "creator": "HolidayJoy",
+        "tags": ["xmas", "santa", "Season Choice"],
+        "rating": 4.5,
+        "stockQuantity": 167,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      }
+    },
+    {
+      "id": 119,
+      "data": {
+        "name": "Sound of love",
+        "price": 12.60,
+        "creator": "LoveArtisan",
+        "tags": ["baby", "angel", "love", "xmas", "music"],
+        "rating": 4.5,
+        "stockQuantity": 0,
+        "stockStatus": "OUT_OF_STOCK",
+        "isAvailable": false,
+        "isLowStock": false,
+        "isOutOfStock": true
+      }
+    },
+    {
+      "id": 120,
+      "data": {
+        "name": "Baby Angel",
+        "price": 7.50,
+        "creator": "CelestialDream",
+        "tags": ["xmas", "baby", "angel"],
+        "rating": 4.5,
+        "stockQuantity": 168,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      }
+    },
+    {
+      "id": 121,
+      "data": {
+        "name": "King",
+        "price": 10.10,
+        "creator": "RegalArtist",
+        "tags": ["king", "xmas", "Season Choice"],
+        "rating": 4.5,
+        "stockQuantity": 167,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      }
+    },
+    {
+      "id": 122,
+      "data": {
+        "name": "Little Red Riding Hood",
+        "price": 3.60,
+        "creator": "TimelessTales",
+        "tags": ["Girl", "student", "camping", "xmas"],
+        "rating": 4.5,
+        "stockQuantity": 172,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      }
+    },
+    {
+      "id": 123,
+      "data": {
+        "name": "Friends Forever",
+        "price": 5.30,
+        "creator": "FriendshipArt",
+        "tags": ["friend", "xmas", "sporty"],
+        "rating": 5.0,
+        "stockQuantity": 172,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+[
+  {
+    "dbId": 100,
+    "figmaProduct": "Product 01",
+    "name": "Cryptic Hacker",
+    "assetUrl": "http://localhost:3845/assets/c987db946c7e77771722c6c59b09744d3fff06cb.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-100.png",
+    "fileSize": 1230679
+  },
+  {
+    "dbId": 101,
+    "figmaProduct": "Product 02",
+    "name": "Frosty Snow Queen",
+    "assetUrl": "http://localhost:3845/assets/ee52308bbb2c32d8a9942d54af7717bb7e18d9c6.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-101.png",
+    "fileSize": 963344
+  },
+  {
+    "dbId": 102,
+    "figmaProduct": "Product 03",
+    "name": "Spooky Halloween Ghost",
+    "assetUrl": "http://localhost:3845/assets/0f2daaf2aa723b94de74dad7e6b075f378de559b.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-102.png",
+    "fileSize": 1100894
+  },
+  {
+    "dbId": 103,
+    "figmaProduct": "Product 04",
+    "name": "Lunar Moon Queen",
+    "assetUrl": "http://localhost:3845/assets/6d722229f92ffdf624ecfff9e515b231c1fb2e8d.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-103.png",
+    "fileSize": 1261419
+  },
+  {
+    "dbId": 104,
+    "figmaProduct": "Product 05",
+    "name": "Jolly Christmas Elf",
+    "assetUrl": "http://localhost:3845/assets/58776648d5abc13c417fd265af54d20ae4d392bb.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-104.png",
+    "fileSize": 1137102
+  },
+  {
+    "dbId": 105,
+    "figmaProduct": "Product 06",
+    "name": "Galactic Astronaut",
+    "assetUrl": "http://localhost:3845/assets/4c1f83bad53e5978f4861f85a6b6c3959c9f2815.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-105.png",
+    "fileSize": 1144022
+  },
+  {
+    "dbId": 106,
+    "figmaProduct": "Product 07",
+    "name": "Rustic Farmer",
+    "assetUrl": "http://localhost:3845/assets/b134bb2ee7e89e265a2eb1a6d37aa98f1d0cecb5.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-106.png",
+    "fileSize": 1286456
+  },
+  {
+    "dbId": 107,
+    "figmaProduct": "Product 08",
+    "name": "Athletic Tennis Girl",
+    "assetUrl": "http://localhost:3845/assets/37a7357ac53524e79dcd89ce8218d54170cad85c.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-107.png",
+    "fileSize": 1012359
+  },
+  {
+    "dbId": 108,
+    "figmaProduct": "Product 09",
+    "name": "Grapevine Wine Monster",
+    "assetUrl": "http://localhost:3845/assets/2621022b0f530014cccaaa39d6534856dd0520ba.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-108.png",
+    "fileSize": 1068746
+  },
+  {
+    "dbId": 109,
+    "figmaProduct": "Product 10",
+    "name": "Regal Rose Lord",
+    "assetUrl": "http://localhost:3845/assets/30c5563b90999cf5b74d07ca4ad94d6d29d0ae5a.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-109.png",
+    "fileSize": 1055049
+  },
+  {
+    "dbId": 110,
+    "figmaProduct": "Product 11",
+    "name": "Skateboard Boy",
+    "assetUrl": "http://localhost:3845/assets/c0c4c4641a0b870a6b7760943d53193dbd6de3cc.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-110.png",
+    "fileSize": 1162884
+  },
+  {
+    "dbId": 111,
+    "figmaProduct": "Product 12",
+    "name": "Oceanic Sea Princess",
+    "assetUrl": "http://localhost:3845/assets/293c52ea58913b9dd758a6b241c74c704cbedccb.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-111.png",
+    "fileSize": 1194857
+  },
+  {
+    "dbId": 113,
+    "figmaProduct": "Product 13",
+    "name": "Mountain Angel Goat",
+    "assetUrl": "http://localhost:3845/assets/db20583610f0682247cb51e3369f3894b68def27.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-113.png",
+    "fileSize": 912157
+  },
+  {
+    "dbId": 114,
+    "figmaProduct": "Product 14",
+    "name": "Joyful Ice Cream Lover",
+    "assetUrl": "http://localhost:3845/assets/86bd2e87408c7138be942a547412321f5f9d7902.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-114.png",
+    "fileSize": 1096101
+  },
+  {
+    "dbId": 115,
+    "figmaProduct": "Product 15",
+    "name": "Elegant White Swan",
+    "assetUrl": "http://localhost:3845/assets/a92c3069e4103814fbc229a6f2cb05ef442d5cbd.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-115.png",
+    "fileSize": 798158
+  },
+  {
+    "dbId": 116,
+    "figmaProduct": "Product 16",
+    "name": "Daring Pilot Captain",
+    "assetUrl": "http://localhost:3845/assets/77e7ffc4c61442dc6e6663b4ac0db32e4cef1d13.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-116.png",
+    "fileSize": 1257879
+  },
+  {
+    "dbId": 117,
+    "figmaProduct": "Product 17",
+    "name": "Quick Brown Squirrel",
+    "assetUrl": "http://localhost:3845/assets/85df4efda123d9bb49ed7e6856f6ce67323d5fb9.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-117.png",
+    "fileSize": 1151572
+  },
+  {
+    "dbId": 118,
+    "figmaProduct": "Product 18",
+    "name": "Cheerful Firefly Kid",
+    "assetUrl": "http://localhost:3845/assets/6f447d58bc12110ba576f5b027dccb25ed236f7e.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-118.png",
+    "fileSize": 1225862
+  },
+  {
+    "dbId": 119,
+    "figmaProduct": "Product 19",
+    "name": "Adventure Camping Boy",
+    "assetUrl": "http://localhost:3845/assets/9bf5b1d0ffea87ed913a50a6b8778c0632d4d108.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-119.png",
+    "fileSize": 1228349
+  },
+  {
+    "dbId": 120,
+    "figmaProduct": "Product 20",
+    "name": "Charming Valentine Cupid",
+    "assetUrl": "http://localhost:3845/assets/5c4ebb9f25ee25cc94ff0ad36ee41574c4203e06.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-120.png",
+    "fileSize": 1164989
+  },
+  {
+    "dbId": 121,
+    "figmaProduct": "Product 21",
+    "name": "Dreamy Purple Baby",
+    "assetUrl": "http://localhost:3845/assets/a9cedf2ba82cccd2bfe52e2ebb95c1c891bfc6e3.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-121.png",
+    "fileSize": 1214007
+  },
+  {
+    "dbId": 122,
+    "figmaProduct": "Product 22",
+    "name": "Wandering Butterfly",
+    "assetUrl": "http://localhost:3845/assets/e554e7bd5ad2aae1f3739cb91ef3fa3ab20a6b6c.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-122.png",
+    "fileSize": 1433530
+  },
+  {
+    "dbId": 123,
+    "figmaProduct": "Product 23",
+    "name": "Forever Young Peter Pan",
+    "assetUrl": "http://localhost:3845/assets/2034dea609b2d15f2dc8dc871ac6d06f447c6767.png",
+    "success": true,
+    "filePath": "/Users/antruong/Work/Projects/SkullCandy2/public/assets/products/product-123.png",
+    "fileSize": 961874
+  }
+]

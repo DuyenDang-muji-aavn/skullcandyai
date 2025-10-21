@@ -1,0 +1,27 @@
+{
+  "products": [
+    {"id": 100, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931715/skullcandy-products/product-100.png"},
+    {"id": 101, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931718/skullcandy-products/product-101.png"},
+    {"id": 102, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931722/skullcandy-products/product-102.png"},
+    {"id": 103, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931727/skullcandy-products/product-103.png"},
+    {"id": 104, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931733/skullcandy-products/product-104.png"},
+    {"id": 105, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931738/skullcandy-products/product-105.png"},
+    {"id": 106, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931742/skullcandy-products/product-106.png"},
+    {"id": 107, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931746/skullcandy-products/product-107.png"},
+    {"id": 108, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931757/skullcandy-products/product-108.png"},
+    {"id": 109, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931761/skullcandy-products/product-109.png"},
+    {"id": 110, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931766/skullcandy-products/product-110.png"},
+    {"id": 111, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931770/skullcandy-products/product-111.png"},
+    {"id": 113, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934811/skullcandy-products/product-113.png"},
+    {"id": 114, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934816/skullcandy-products/product-114.png"},
+    {"id": 115, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934819/skullcandy-products/product-115.png"},
+    {"id": 116, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934829/skullcandy-products/product-116.png"},
+    {"id": 117, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934833/skullcandy-products/product-117.png"},
+    {"id": 118, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934837/skullcandy-products/product-118.png"},
+    {"id": 119, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934843/skullcandy-products/product-119.png"},
+    {"id": 120, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934852/skullcandy-products/product-120.png"},
+    {"id": 121, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934856/skullcandy-products/product-121.png"},
+    {"id": 122, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934865/skullcandy-products/product-122.png"},
+    {"id": 123, "url": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934869/skullcandy-products/product-123.png"}
+  ]
+}

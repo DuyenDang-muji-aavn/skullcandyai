@@ -1,0 +1,141 @@
+# SkullCandy Component Library
+
+Welcome to the SkullCandy NFT Marketplace component library! This Storybook contains all the components used in the SkullCandy project.
+
+## 🎨 Design System
+
+All components follow the SkullCandy design system with:
+- **Glass morphism** UI patterns
+- **Orbitron** font for headings
+- **Outfit** font for body text
+- **Gradient accents** and borders
+- **Dark theme** optimized
+
+## 📦 Components
+
+### Core UI Components
+
+#### Button
+CTA, Neutral, and Stroke variants in Large (L), Medium (M), and Small (S) sizes.
+
+**Figma**: [Button Component](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy?node-id=4:1696)
+
+#### SearchBar
+Glass morphism search input with icon and placeholder support.
+
+**Figma**: [SearchBar Component](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy?node-id=4:1716)
+
+### Layout Components
+
+#### Navbar
+Main navigation bar with sticky positioning support.
+
+**Figma**: [Navbar Component](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy?node-id=121:6143)
+
+#### Footer
+Page footer with optional cart summary and custom content.
+
+**Figma**: [Footer Component](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy?node-id=121:6151)
+
+#### HeroSection
+Landing page hero with title, description, CTA, and featured content area.
+
+**Figma**: [HeroSection Component](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy?node-id=121:6155)
+
+### Content Components
+
+#### SectionHeading
+Page section headers with title, description, and optional alignment.
+
+**Figma**: [SectionHeading Component](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy?node-id=121:6082)
+
+#### NFTCard
+Product card displaying NFT image, title, author, countdown timer, price, and bid button.
+
+**Figma**: [NFTCard Component](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy?node-id=121:6088)
+
+#### NFTGrid
+Grid layout for displaying multiple NFT cards with optional header and search.
+
+**Figma**: [NFTGrid Component](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy?node-id=121:6074)
+
+### E-commerce Components
+
+#### Cart
+Shopping cart with item list, quantities, and total calculation.
+
+## 🚀 Usage
+
+### Installation
+
+```bash
+pnpm install
+```
+
+### Development
+
+```bash
+# Run Storybook
+pnpm sb
+
+# Build Storybook
+pnpm sb:build
+```
+
+### Importing Components
+
+```tsx
+import { Button } from '@/components/button';
+import { NFTCard } from '@/components/nft-card';
+import { SearchBar } from '@/components/search-bar';
+```
+
+## 📐 Design Tokens
+
+Key design tokens used across components:
+
+### Typography
+- `font-family-title` - Orbitron (headings)
+- `font-family-body` - Outfit (body text)
+
+### Colors
+- `--glass-light` - Light glass morphism background
+- `--glass-dark` - Dark glass morphism background
+- `--button-gradient` - CTA button gradient
+
+### Effects
+- `--glass-blur` - Backdrop blur amount (100px)
+- `--gradient-border-main` - Glass border gradient
+
+### Spacing
+- Standard Tailwind spacing scale
+- Custom gaps for grid layouts
+
+## 🎯 Best Practices
+
+1. **Use semantic tokens** - Always use design tokens instead of hardcoded values
+2. **Follow Figma specs** - Components match Figma designs pixel-perfect
+3. **Accessibility first** - All components are keyboard accessible and screen reader friendly
+4. **Responsive by default** - Components adapt to different screen sizes
+5. **TypeScript interfaces** - All props are fully typed
+
+## 📚 Documentation
+
+Each component has:
+- ✅ Full TypeScript types
+- ✅ Multiple story variants
+- ✅ Interactive playground
+- ✅ Figma design links
+- ✅ Usage examples
+
+## 🔗 Links
+
+- [Figma Design File](https://www.figma.com/design/V8UvDvpedWuc7biBBVPi7C/SkullCandy)
+- [Component Documentation](../docs/components/)
+- [Design System Guide](../.github/instructions/component-patterns.instructions.md)
+
+---
+
+**Status**: ✅ All components implemented and tested  
+**Coverage**: 8/8 components with full Storybook stories  
+**Last Updated**: October 20, 2025

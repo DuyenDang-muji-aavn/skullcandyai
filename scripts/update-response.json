@@ -1,0 +1,465 @@
+{
+  "success": true,
+  "data": {
+    "products": [
+      {
+        "id": 100,
+        "name": "Cryptic Hacker",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931715/skullcandy-products/product-100.png",
+        "price": 3.75,
+        "tags": [
+          "tech",
+          "cyber",
+          "hacker",
+          "digital"
+        ],
+        "rating": 4.5,
+        "background": "#49B649",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085619/product-9_izxoip.png",
+        "stockQuantity": 145,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 101,
+        "name": "Frosty Snow Queen",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931718/skullcandy-products/product-101.png",
+        "price": 4.2,
+        "tags": [
+          "winter",
+          "queen",
+          "snow",
+          "Season Choice"
+        ],
+        "rating": 4.8,
+        "background": "#AF2A3A",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085618/product-8_ilb35w.png",
+        "stockQuantity": 132,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 102,
+        "name": "Spooky Halloween Ghost",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931722/skullcandy-products/product-102.png",
+        "price": 1.85,
+        "tags": [
+          "halloween",
+          "ghost",
+          "spooky",
+          "Season Choice"
+        ],
+        "rating": 4.3,
+        "background": "#E1BF47",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085621/product-14_zjklgw.png",
+        "stockQuantity": 178,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 103,
+        "name": "Lunar Moon Queen",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931727/skullcandy-products/product-103.png",
+        "price": 2.9,
+        "tags": [
+          "moon",
+          "celestial",
+          "queen",
+          "night"
+        ],
+        "rating": 4.7,
+        "background": "#4962B6",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085620/product-12_pogsq2.png",
+        "stockQuantity": 98,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 104,
+        "name": "Jolly Christmas Elf",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931733/skullcandy-products/product-104.png",
+        "price": 2.2,
+        "tags": [
+          "xmas",
+          "elf",
+          "holiday",
+          "Season Choice"
+        ],
+        "rating": 4.6,
+        "background": "#B69349",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085620/product-13_vr2c32.png",
+        "stockQuantity": 165,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 105,
+        "name": "Galactic Astronaut",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931738/skullcandy-products/product-105.png",
+        "price": 3,
+        "tags": [
+          "space",
+          "astronaut",
+          "galaxy",
+          "sci-fi"
+        ],
+        "rating": 4.9,
+        "background": "#954AB1",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085619/product-10_jkyk6u.png",
+        "stockQuantity": 87,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 106,
+        "name": "Rustic Farmer",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931742/skullcandy-products/product-106.png",
+        "price": 1.5,
+        "tags": [
+          "farm",
+          "rustic",
+          "nature",
+          "earth"
+        ],
+        "rating": 4.2,
+        "background": "#1E82A3",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085618/product-7_ixc304.png",
+        "stockQuantity": 200,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 107,
+        "name": "Athletic Tennis Girl",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931746/skullcandy-products/product-107.png",
+        "price": 2.75,
+        "tags": [
+          "sporty",
+          "tennis",
+          "athletic",
+          "girl"
+        ],
+        "rating": 4.5,
+        "background": "#BE0B88",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085618/product-8_ilb35w.png",
+        "stockQuantity": 154,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 108,
+        "name": "Grapevine Wine Monster",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931757/skullcandy-products/product-108.png",
+        "price": 2,
+        "tags": [
+          "wine",
+          "grape",
+          "monster",
+          "Season Choice"
+        ],
+        "rating": 4.4,
+        "background": "#A5B649",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085618/product-6_o0fihs.png",
+        "stockQuantity": 119,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 109,
+        "name": "Regal Rose Lord",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931761/skullcandy-products/product-109.png",
+        "price": 3.5,
+        "tags": [
+          "rose",
+          "floral",
+          "regal",
+          "elegant"
+        ],
+        "rating": 4.8,
+        "background": "#49ABB6",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085618/product-5_gwnuzv.png",
+        "stockQuantity": 76,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 110,
+        "name": "Skateboard Boy",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931766/skullcandy-products/product-110.png",
+        "price": 1.95,
+        "tags": [
+          "skateboard",
+          "urban",
+          "sporty",
+          "boy"
+        ],
+        "rating": 4.3,
+        "background": "#B64957",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085617/product-4_fqgvn1.png",
+        "stockQuantity": 188,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 111,
+        "name": "Oceanic Sea Princess",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760931770/skullcandy-products/product-111.png",
+        "price": 3.35,
+        "tags": [
+          "ocean",
+          "sea",
+          "princess",
+          "aqua"
+        ],
+        "rating": 4.7,
+        "background": "#B66649",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085617/product-3_iqjse7.png",
+        "stockQuantity": 142,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 113,
+        "name": "Mountain Angel Goat",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934811/skullcandy-products/product-113.png",
+        "price": 4,
+        "tags": [
+          "ice cream",
+          "sweet",
+          "summer",
+          "joyful"
+        ],
+        "rating": 4.9,
+        "background": "#810CC5",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085616/product-2_kcpwmj.png",
+        "stockQuantity": 167,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 114,
+        "name": "Joyful Ice Cream Lover",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934816/skullcandy-products/product-114.png",
+        "price": 2.99,
+        "tags": [
+          "pilot",
+          "aviation",
+          "captain",
+          "sky"
+        ],
+        "rating": 4.6,
+        "background": "#EDBF6B",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085616/product-1_k9qkdo.png",
+        "stockQuantity": 91,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 115,
+        "name": "Elegant White Swan",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934819/skullcandy-products/product-115.png",
+        "price": 3.5,
+        "tags": [
+          "valentine",
+          "cupid",
+          "love",
+          "Season Choice"
+        ],
+        "rating": 5,
+        "background": "#9F0000",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085616/feature-product_ptakt1.png",
+        "stockQuantity": 112,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 116,
+        "name": "Daring Pilot Captain",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934829/skullcandy-products/product-116.png",
+        "price": 4,
+        "tags": [
+          "santa",
+          "xmas",
+          "cute"
+        ],
+        "rating": 4.5,
+        "background": "#A95FA1",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085623/product-15_hhyqvl.png",
+        "stockQuantity": 164,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 117,
+        "name": "Quick Brown Squirrel",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934833/skullcandy-products/product-117.png",
+        "price": 2.5,
+        "tags": [
+          "camping",
+          "xmas",
+          "Season Choice",
+          "boy"
+        ],
+        "rating": 4.5,
+        "background": "#C8BD1D",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085622/product-11_yi2cml.png",
+        "stockQuantity": 17,
+        "stockStatus": "LOW_STOCK",
+        "isAvailable": true,
+        "isLowStock": true,
+        "isOutOfStock": false
+      },
+      {
+        "id": 118,
+        "name": "Cheerful Firefly Kid",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934837/skullcandy-products/product-118.png",
+        "price": 2.2,
+        "tags": [
+          "xmas",
+          "santa",
+          "Season Choice"
+        ],
+        "rating": 4.5,
+        "background": "#2E71DE",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085621/product-14_zjklgw.png",
+        "stockQuantity": 167,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 119,
+        "name": "Adventure Camping Boy",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934843/skullcandy-products/product-119.png",
+        "price": 2.85,
+        "tags": [
+          "baby",
+          "angel",
+          "love",
+          "xmas",
+          "music"
+        ],
+        "rating": 4.5,
+        "background": "#179193",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085620/product-12_pogsq2.png",
+        "stockQuantity": 0,
+        "stockStatus": "OUT_OF_STOCK",
+        "isAvailable": false,
+        "isLowStock": false,
+        "isOutOfStock": true
+      },
+      {
+        "id": 120,
+        "name": "Charming Valentine Cupid",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934852/skullcandy-products/product-120.png",
+        "price": 3.6,
+        "tags": [
+          "xmas",
+          "baby",
+          "angel"
+        ],
+        "rating": 4.5,
+        "background": "#1340BA",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085620/product-13_vr2c32.png",
+        "stockQuantity": 168,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 121,
+        "name": "Dreamy Purple Baby",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934856/skullcandy-products/product-121.png",
+        "price": 3.75,
+        "tags": [
+          "king",
+          "xmas",
+          "Season Choice"
+        ],
+        "rating": 4.5,
+        "background": "#B65749",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085619/product-10_jkyk6u.png",
+        "stockQuantity": 167,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 122,
+        "name": "Wandering Butterfly",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934865/skullcandy-products/product-122.png",
+        "price": 1.75,
+        "tags": [
+          "Girl",
+          "student",
+          "camping",
+          "xmas"
+        ],
+        "rating": 4.5,
+        "background": "#1C914A",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085619/product-9_izxoip.png",
+        "stockQuantity": 172,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      },
+      {
+        "id": 123,
+        "name": "Forever Young Peter Pan",
+        "image": "https://res.cloudinary.com/dtes5pcfm/image/upload/v1760934869/skullcandy-products/product-123.png",
+        "price": 3.6,
+        "tags": [
+          "friend",
+          "xmas",
+          "sporty"
+        ],
+        "rating": 5,
+        "background": "#D3A117",
+        "backgroundImg": "https://res.cloudinary.com/dkry0b4yx/image/upload/v1760085618/product-7_ixc304.png",
+        "stockQuantity": 172,
+        "stockStatus": "IN_STOCK",
+        "isAvailable": true,
+        "isLowStock": false,
+        "isOutOfStock": false
+      }
+    ],
+    "total": 23
+  },
+  "message": "Products updated successfully"
+}

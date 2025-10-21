@@ -1,0 +1,132 @@
+/* src/styles/tokens.css */
+:root {
+  /* Background & Foreground */
+  --bg: white;
+  --fg: #0a0a0a;
+  --muted: #f3f4f6;
+  --ring: #c7d2fe;
+  --border: #e5e7eb;
+  
+  /* Brand Colors - from Figma variable collection */
+  --brand-9: #0E50F7;
+  --brand-contrast: #ffffff;
+  
+  /* Border Radius */
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;                /* Figma: Radius/Button */
+  --radius-card: 24px;                  /* Figma: Radius/Card */
+  
+  /* Color Variables from Figma */
+  --color-text: #ffffff;
+  --color-border: #ffffff; /* 90% opacity applied in usage */
+  --color-glass-dark: #000000; /* 10% opacity */
+  --color-glass-light: #ffffff; /* 10% opacity */
+  
+  /* Glass Morphism Effects - From Figma "Glass Blur/Amount: 200" */
+  --glass-blur-amount: 200; /* Figma design variable (units) */
+  --glass-blur: 100px; /* CSS blur value - Figma divides by 2: 200/2 = 100px */
+  --glass-blur-96: 96px; /* Legacy, to be replaced */
+  --glass-light: rgba(255, 255, 255, 0.1); /* Color/Glass Light #ffffff1a */
+  --glass-dark: rgba(0, 0, 0, 0.1);     /* Color/Glass Dark #0000001a */
+  --glass-border: #ffffff; /* White border for glass elements */
+  --glass-border-alpha: rgba(255, 255, 255, 0.9); /* 90% opacity variant */
+  
+  /* Gradient Border Colors - for CSS mask technique */
+  --gradient-border-main: linear-gradient(135deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.00) 50%, rgba(255, 255, 255, 0.90) 100%); /* Primary gradient stroke */
+  --gradient-border-subtle: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.00) 50%, rgba(255, 255, 255, 0.5) 100%); /* Subtle variant */
+  --gradient-border-vibrant: linear-gradient(135deg, rgba(1, 166, 255, 0.9) 0%, rgba(132, 235, 127, 0.9) 50%, rgba(140, 226, 59, 0.9) 100%); /* Colorful gradient */
+  
+  /* Button Gradient - from Figma specification */
+  --button-gradient: linear-gradient(273deg, rgba(1, 166, 255, 0.70) 2.08%, rgba(132, 235, 127, 0.70) 46.22%, rgba(140, 226, 59, 0.70) 89.23%, rgba(64, 106, 255, 0.70) 108.56%);
+  
+  /* Typography - Font Families */
+  --font-display: 'Orbitron', sans-serif;
+  --font-family-title: 'Orbitron', sans-serif;
+  --font-family-button: 'Orbitron', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  /* Typography Sizes - Hero */
+  --text-hero-title: 60px;
+  --text-hero-desc: 24px;
+  
+  /* Typography Sizes - Sections */
+  --text-section-title: 48px;
+  --text-section-desc: 20px;
+  
+  /* Typography Sizes - Cards */
+  --text-card-title: 20px;
+  --text-card-subtitle: 14px;
+  --text-card-price: 16px;
+  
+  /* Button Typography Sizes */
+  --font-size-button-l: 24px;
+  --font-size-button-m: 18px;
+  --font-size-button-s: 14px;
+  
+  /* Button Spacing */
+  --button-padding-l: 18px 80px 19px;
+  --button-padding-m-cta: 12px 32px;
+  --button-padding-m: 12px 16px;
+  --button-padding-s: 12px 16px;
+  --button-gap-l: 10px;
+  --button-gap: 8px;
+  
+  /* Effects - Blur */
+  --backdrop-blur-main: blur(100px); /* Main glass blur - Figma 200 ÷ 2 = 100px */
+  --backdrop-blur-100: blur(100px); /* Main glass blur */
+  --backdrop-blur-96: blur(96px); /* Legacy, to be replaced */
+  --backdrop-blur-3-723: blur(3.723px); /* Countdown badge specific */
+  --blur-s: 24px;
+  
+  /* Effects - Shadows */
+  --shadow-l: rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 12px 48px rgba(0, 0, 0, 0.2);
+  
+  /* Surface Tokens */
+  --surface-card: var(--glass-light);
+  --surface-header: rgba(0, 0, 0, 0.5);
+  --surface-hero: rgba(0, 0, 0, 0.3);
+  
+  /* Layout Tokens - for wireframe and page structure */
+  --container-max: 1366px;
+  --container-padding: 40px;
+  --header-h: 91px;
+  --hero-h: 1025px;
+  --footer-h: 90px;
+  
+  /* Spacing Scale (8px base unit) */
+  --spacing-0-5: 4px;
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 40px;
+  --spacing-6: 48px;
+  --spacing-8: 64px;
+  --spacing-10: 80px;
+  
+  /* Negative Spacing (for overlapping layouts) */
+  --spacing-negative-3: -24px;
+  --spacing-negative-6: -48px;
+  
+  /* NFT Card Specific Typography */
+  --text-card-title-nft: 18px;
+  --text-card-author: 16px;
+  --text-card-badge: 16px;                /* Figma: 14.891px rounded to 16px */
+  --text-card-price-nft: 18px;
+  
+  /* NFT Card Icons */
+  --icon-size-m: 32px;
+  
+  /* Glass Effects - Additional variants */
+  --glass-dark-light: rgba(0, 0, 0, 0.05);
+  --glass-blur-sm: 4px;
+}

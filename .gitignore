@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+dist
+storybook-static
+.turbo
+.vercel
+*.log
+.DS_Store
+.env*.local
+coverage
+.vscode

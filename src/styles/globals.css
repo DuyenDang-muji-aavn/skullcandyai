@@ -1,0 +1,119 @@
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg text-fg;
+  }
+}
+
+@layer utilities {
+  /* Gradient Border Technique using CSS Mask - for Glassmorphism Effect */
+  
+  /* Base gradient border wrapper */
+
+  
+  .glass-border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px; /* Border width */
+    background: var(--gradient-border-main);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  /* Subtle variant - less opacity */
+  .glass-border-subtle {
+    position: relative;
+    border-radius: inherit;
+  }
+  
+  .glass-border-subtle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-border-subtle);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  /* Vibrant variant - colorful gradient for CTAs */
+
+  
+  .glass-border-vibrant::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-border-vibrant);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  /* Thicker border variant - 2px */
+  .glass-border-thick {
+    position: relative;
+    border-radius: inherit;
+  }
+  
+  .glass-border-thick::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: var(--gradient-border-main);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: exclude;
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  /* Button-specific gradient border - maintains pill shape */
+  .button-gradient-border {
+    position: relative;
+    border: none;
+  }
+  
+  .button-gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px; /* Explicit pill shape */
+    padding: 1px; /* Border width */
+    background: var(--gradient-border-main, linear-gradient(135deg, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.00) 50%, rgba(255,255,255,0.90) 100%));
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .button-gradient-border > * {
+    position: relative;
+    z-index: 1;
+  }
+}

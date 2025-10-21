@@ -1,0 +1,80 @@
+{
+  "project": "SkullCandy",
+  "organization": "ePost",
+  "session": {
+    "id": "session-[timestamp]",
+    "started": "2025-10-16T09:00:00+07:00",
+    "lastUpdated": "2025-10-16T09:00:00+07:00",
+    "status": "active"
+  },
+  "currentTask": {
+    "id": "task-001",
+    "description": "[Current task description]",
+    "status": "in-progress",
+    "startedAt": "2025-10-16T09:00:00+07:00",
+    "progress": 50,
+    "blockers": []
+  },
+  "completedTasks": [
+    {
+      "id": "task-000",
+      "description": "Setup project instructions",
+      "completedAt": "2025-10-16T09:00:00+07:00",
+      "outcome": "success",
+      "notes": "Optimized all instruction files"
+    }
+  ],
+  "pendingTasks": [
+    {
+      "id": "task-002",
+      "description": "[Next task]",
+      "priority": "high",
+      "estimatedTime": "30min",
+      "dependencies": []
+    }
+  ],
+  "components": {
+    "completed": [
+      "Button",
+      "NFTCard",
+      "SearchBar",
+      "SectionHeading"
+    ],
+    "inProgress": [],
+    "planned": []
+  },
+  "fileChanges": {
+    "modified": [],
+    "created": [],
+    "deleted": []
+  },
+  "decisions": [
+    {
+      "timestamp": "2025-10-16T09:00:00+07:00",
+      "decision": "[Key decision made]",
+      "rationale": "[Why this decision]",
+      "impact": "[What it affects]"
+    }
+  ],
+  "issues": {
+    "blockers": [],
+    "warnings": [],
+    "notes": []
+  },
+  "nextSteps": [
+    "[Immediate next step]",
+    "[Following step]"
+  ],
+  "context": {
+    "figmaMCPUsed": false,
+    "terminalsActive": 0,
+    "devServerRunning": false,
+    "lastCommand": ""
+  },
+  "metrics": {
+    "filesModified": 0,
+    "componentsCreated": 0,
+    "docsUpdated": 0,
+    "sessionDuration": "0h 0m"
+  }
+}
