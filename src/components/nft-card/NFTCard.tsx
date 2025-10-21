@@ -12,7 +12,7 @@ export const NFTCard = React.forwardRef<HTMLDivElement, NFTCardProps>(
       imageAlt,
       title,
       author,
-      verified = false,
+      verified: _verified = false, // Prefix with underscore to indicate intentionally unused
       countdown,
       price,
       currency = 'ETH',

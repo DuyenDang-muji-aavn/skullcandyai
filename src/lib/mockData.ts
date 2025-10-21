@@ -300,10 +300,8 @@ export const mockFeaturedNFT: FeaturedNFT = {
   priceUsd: 5758.31,
   timeRemaining: 17 * 60 * 60 * 1000 + 56 * 60 * 1000 + 3 * 1000, // 17h 56m 03s
   verified: true,
-  currentBid: 5.758,
-  latestBidUsd: 5758.31,
-  priceChange: 12.45,
-  priceChangeDirection: 'up',
+  featured: true,
+  description: 'Exclusive HAPE Prime collection piece',
 };
 
 /**
@@ -313,8 +311,8 @@ export const mockFeaturedNFT: FeaturedNFT = {
 export const mockUser: User = {
   id: 'user-1',
   username: 'MUJI',
-  avatarUrl: '/images/avatars/muji.png',
-  walletAddress: '0x1234...5678',
+  avatar: '/images/avatars/muji.png',
+  verified: false,
 };
 
 /**
@@ -324,15 +322,15 @@ export const mockUser: User = {
 export const mockCartItems: CartItem[] = [
   {
     nft: mockNFTs[0], // Cryptic Hacker
-    addedAt: Date.now() - 1000 * 60 * 15, // Added 15 minutes ago
+    quantity: 1,
   },
   {
     nft: mockNFTs[1], // Frosty Snow Queen
-    addedAt: Date.now() - 1000 * 60 * 30, // Added 30 minutes ago
+    quantity: 1,
   },
   {
     nft: mockNFTs[3], // Lunar Moon Queen
-    addedAt: Date.now() - 1000 * 60 * 5, // Added 5 minutes ago
+    quantity: 1,
   },
 ];
 
