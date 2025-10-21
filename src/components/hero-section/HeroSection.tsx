@@ -14,6 +14,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   background,
   className = '',
 }) => {
+  // Default scroll behavior if no onClick provided
+  const handleClick = () => {
+    if (ctaOnClick) {
+      ctaOnClick();
+    } else {
+      // Default: scroll to products section
+      const productsSection = document.getElementById('products');
+      if (productsSection) {
+        productsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <section
       className={`
@@ -77,7 +90,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* CTA Button - Keep as inline-flex to not stretch full width */}
         <div>
-          <Button style="CTA" size="L" onClick={ctaOnClick}>
+          <Button style="CTA" size="L" onClick={handleClick}>
             {ctaLabel}
           </Button>
         </div>
