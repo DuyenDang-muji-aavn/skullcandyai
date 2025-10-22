@@ -10,13 +10,15 @@ A modern, production-ready NFT marketplace built with Next.js 14, featuring glas
 ## ✨ Features
 
 - 🎨 **Glass Morphism Design** - Modern UI with backdrop blur effects and gradient borders
-- 🔥 **9 Complete Components** - Button, NFTCard, SearchBar, Navbar, Cart, and more
+- 🔥 **10 Complete Components** - Button, NFTCard, SearchBar, Navbar, Cart, Snackbar, and more
 - 📱 **Fully Responsive** - Mobile-first design with breakpoints
 - ⚡ **70+ Storybook Stories** - Comprehensive component documentation and testing
 - 🎯 **Figma Integration** - Pixel-perfect implementation via Figma MCP
 - 🧪 **Type-Safe** - Full TypeScript coverage with strict mode
 - 🚀 **Performance Optimized** - Next.js 14 App Router with optimized images
 - ♿ **Accessible** - WCAG AA compliant with ARIA support
+- 🛒 **Shopping Cart** - Unlimited items, remove buttons, duplicate prevention
+- 🔔 **Toast Notifications** - Snackbar system with auto-dismiss and type-based colors
 
 ## 🎯 Project Overview
 
@@ -26,8 +28,10 @@ SkullCandy is a next-generation NFT marketplace showcasing:
 - **Component Library** - Reusable, composable components with variants
 - **Real-time Features** - Live countdown timers for NFT auctions
 - **Search & Filtering** - Advanced search with live updates
-- **Shopping Cart** - Complete cart functionality with item management
+- **Shopping Cart** - Unlimited items, hover-reveal remove buttons, duplicate detection
+- **Toast Notifications** - Snackbar system for user feedback (success, warning, info, error)
 - **3D Transforms** - Engaging hero section with depth effects
+- **MCP Server** - Unified design system server on port 3001 (MCP + REST API)
 
 ## 📦 Tech Stack
 
@@ -76,7 +80,7 @@ pnpm sb
 | `pnpm start` | Start production server |
 | `pnpm sb` | Start Storybook (port 6006) |
 | `pnpm sb:build` | Build Storybook for production |
-| `pnpm mcp` | Start MCP design system server (port 8787) |
+| `pnpm mcp` | Start unified MCP server (port 3001) |
 | `pnpm mcp:test` | Test all MCP endpoints |
 | `pnpm lint` | Run ESLint |
 | `pnpm format` | Format code with Prettier |
@@ -107,6 +111,13 @@ skullcandyai/
 │   │   ├── button.md         # Figma node → Button component
 │   │   ├── nft-card.md       # NFTCard mapping with variants
 │   │   └── ...               # All component mappings
+│   ├── changelogs/           # Component update logs
+│   │   ├── HERO_SECTION_COMPLETE.md
+│   │   ├── FEATURED_SECTION_3D_COMPLETE.md
+│   │   └── ...               # All component updates
+│   ├── setup/                # MCP server setup guides
+│   │   ├── MCP_UNIFIED_SERVER.md
+│   │   └── MCP_QUICK_REFERENCE.md
 │   └── api/                  # API documentation
 │       ├── figma-mcp.md      # Figma MCP integration guide
 │       └── backend-api.md    # Backend API specs
@@ -122,7 +133,7 @@ skullcandyai/
 │   │   ├── layout.tsx        # Root layout (Orbitron + Outfit fonts)
 │   │   ├── page.tsx          # Landing page
 │   │   └── HomeClient.tsx    # Client-side home page
-│   ├── components/           # React components (9 total)
+│   ├── components/           # React components (10 total)
 │   │   ├── button/           # CTA, Neutral, Stroke variants (L/M/S)
 │   │   ├── nft-card/         # NFT card with countdown & verification
 │   │   ├── search-bar/       # Glass morphism search (M/L sizes)
@@ -130,7 +141,8 @@ skullcandyai/
 │   │   ├── nft-grid/         # Grid with search & filtering
 │   │   ├── navbar/           # Sticky navbar with cart badge
 │   │   ├── hero-section/     # Hero with 3D card transform
-│   │   ├── cart/             # Shopping cart with items
+│   │   ├── cart/             # Shopping cart with unlimited items & remove
+│   │   ├── snackbar/         # Toast notifications with auto-dismiss
 │   │   └── footer/           # Footer with social links
 │   ├── styles/               # Global styles and tokens
 │   │   ├── tokens.css        # 130+ design tokens
@@ -160,7 +172,8 @@ skullcandyai/
 | **NFTGrid** | With/without search | Responsive grid layout for NFT cards |
 | **Navbar** | Sticky, transparent | Navigation with cart badge and blur effect |
 | **HeroSection** | With featured card | Landing hero with 3D transform effects |
-| **Cart** | Open/closed | Shopping cart with item management |
+| **Cart** | Open/closed | Shopping cart with unlimited items, remove buttons, duplicate detection |
+| **Snackbar** | Info, Success, Warning, Error | Toast notifications with auto-dismiss and manual close |
 | **Footer** | Social links | Footer with navigation and social icons |
 
 ### Design System
@@ -318,7 +331,8 @@ pnpm sb
 - **NFTGrid**: 8 stories (with/without search, layouts)
 - **Navbar**: 5 stories (states, cart badge, responsive)
 - **HeroSection**: 7 stories (featured cards, backgrounds)
-- **Cart**: 6 stories (empty, with items, interactions)
+- **Cart**: 6 stories (empty, with items, remove interactions)
+- **Snackbar**: 4 stories (info, success, warning, error types)
 - **Footer**: 7 stories (layouts, social links)
 
 **Features:**
@@ -430,8 +444,8 @@ NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloud-name
 
 - [x] Next.js 14 + TypeScript + React 18 setup
 - [x] Tailwind CSS with 130+ design tokens
-- [x] 9 fully implemented components
-- [x] 70+ Storybook stories (all working)
+- [x] 10 fully implemented components (including Snackbar)
+- [x] 74+ Storybook stories (all working)
 - [x] Figma MCP integration
 - [x] Complete documentation system
 - [x] Component specs (18 sections each)
@@ -442,6 +456,10 @@ NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloud-name
 - [x] Gradient borders and backdrop blur
 - [x] Responsive design (mobile-first)
 - [x] Accessibility (WCAG AA)
+- [x] Shopping cart enhancements (unlimited items, remove, duplicate detection)
+- [x] Toast notification system (Snackbar with auto-dismiss)
+- [x] MCP unified server (port 3001, MCP + REST API)
+- [x] Documentation reorganization (changelogs, setup guides)
 
 ### 🎯 Ready for Development
 
