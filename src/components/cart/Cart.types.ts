@@ -10,6 +10,7 @@ export interface CartItemProps {
 
 export interface CartProps {
   items: CartItemProps[];
+  onRemoveItem: (itemId: string) => void;
 }
 
 export function mapProductToCartItem(product: Product): CartItemProps {

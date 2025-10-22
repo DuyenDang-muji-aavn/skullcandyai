@@ -76,6 +76,8 @@ pnpm sb
 | `pnpm start` | Start production server |
 | `pnpm sb` | Start Storybook (port 6006) |
 | `pnpm sb:build` | Build Storybook for production |
+| `pnpm mcp` | Start MCP design system server (port 8787) |
+| `pnpm mcp:test` | Test all MCP endpoints |
 | `pnpm lint` | Run ESLint |
 | `pnpm format` | Format code with Prettier |
 | `pnpm test` | Run all tests with Vitest |

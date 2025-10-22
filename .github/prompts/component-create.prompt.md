@@ -1,6 +1,6 @@
 ---
 mode: 'agent'
-model: 'GPT-4o'
+model: 'Claude Sonnet 4.5'
 tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'Nx Mcp Server/*', 'figma-mcp-server/*', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos']
 description: 'Generate a new component across code, docs, mapping, and assets, using explicit constraints from Figma metadata only'
 ---

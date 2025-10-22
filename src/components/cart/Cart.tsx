@@ -1,7 +1,7 @@
 import React from 'react';
 import { CartProps } from './Cart.types';
 
-export const Cart: React.FC<CartProps> = ({ items }) => {
+export const Cart: React.FC<CartProps> = ({ items, onRemoveItem }) => {
   // Calculate total price
   const totalPrice = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
@@ -28,12 +28,12 @@ export const Cart: React.FC<CartProps> = ({ items }) => {
 
           {/* Bid Info Section */}
           <div className="flex items-center gap-6 py-2" data-name="Bid Info">
-            {/* Product Images */}
-            <div className="flex items-center gap-2" data-name="Images">
-              {items.slice(0, 3).map((item, index) => (
+            {/* Product Images - Show all items (no limit) */}
+            <div className="flex items-center gap-2 flex-wrap max-w-[600px]" data-name="Images">
+              {items.map((item) => (
                 <div 
-                  key={index}
-                  className="backdrop-blur-glass glass-border-gradient rounded-[16px] px-3 py-2.5"
+                  key={item.id}
+                  className="backdrop-blur-glass glass-border-gradient rounded-[16px] px-3 py-2.5 relative group"
                   data-name="Item"
                 >
                   <div className="w-9 h-10 relative overflow-hidden rounded-lg">
@@ -44,6 +44,30 @@ export const Cart: React.FC<CartProps> = ({ items }) => {
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
+                  
+                  {/* Remove Button - appears on hover */}
+                  <button
+                    onClick={() => onRemoveItem(item.id)}
+                    className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    aria-label={`Remove ${item.name} from cart`}
+                    title={`Remove ${item.name}`}
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 3L3 9M3 3L9 9"
+                        stroke="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
                 </div>
               ))}
             </div>

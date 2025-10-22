@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import { NFTGrid } from '@/components/nft-grid';
 import { NFTCardClient } from '@/components/nft-card-client';
 import { Cart } from '@/components/cart';
+import { Snackbar } from '@/components/snackbar';
 import { generateRandomCountdown, generateCreatorName, isVerified } from '@/lib/utils';
 import { mapProductToCartItem, CartItemProps } from '@/components/cart/Cart.types';
 import type { Product } from '@/lib/types';
@@ -21,10 +22,54 @@ interface HomeClientProps {
 export function HomeClient({ products }: HomeClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [cartItems, setCartItems] = useState<CartItemProps[]>([]);
+  const [snackbar, setSnackbar] = useState({
+    isOpen: false,
+    message: '',
+    type: 'info' as 'info' | 'success' | 'warning' | 'error',
+  });
 
   const handleAddToCart = (product: Product) => {
+    // Check if product is already in cart
+    const isAlreadyInCart = cartItems.some(item => item.id === String(product.id));
+    
+    if (isAlreadyInCart) {
+      // Show warning snackbar
+      setSnackbar({
+        isOpen: true,
+        message: `"${product.name}" is already in your cart!`,
+        type: 'warning',
+      });
+      return;
+    }
+
+    // Add to cart
     const cartItem = mapProductToCartItem(product);
     setCartItems((prevItems) => [...prevItems, cartItem]);
+    
+    // Show success snackbar
+    setSnackbar({
+      isOpen: true,
+      message: `"${product.name}" added to cart!`,
+      type: 'success',
+    });
+  };
+
+  const handleRemoveFromCart = (itemId: string) => {
+    const removedItem = cartItems.find(item => item.id === itemId);
+    setCartItems((prevItems) => prevItems.filter(item => item.id !== itemId));
+    
+    // Show info snackbar
+    if (removedItem) {
+      setSnackbar({
+        isOpen: true,
+        message: `"${removedItem.name}" removed from cart`,
+        type: 'info',
+      });
+    }
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar((prev) => ({ ...prev, isOpen: false }));
   };
 
   // Filter products based on search query (case-insensitive, searches in name)
@@ -92,7 +137,16 @@ export function HomeClient({ products }: HomeClientProps) {
       </section>
 
       {/* Cart Component - Always show on the screen */}
-      <Cart items={cartItems} />
+      <Cart items={cartItems} onRemoveItem={handleRemoveFromCart} />
+
+      {/* Snackbar for notifications */}
+      <Snackbar
+        message={snackbar.message}
+        type={snackbar.type}
+        isOpen={snackbar.isOpen}
+        onClose={handleCloseSnackbar}
+        duration={3000}
+      />
     </>
   );
 }

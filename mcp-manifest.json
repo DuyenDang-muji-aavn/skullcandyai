@@ -1,0 +1,31 @@
+{
+  "name": "SkullCandy Design System MCP",
+  "version": "0.1.0",
+  "description": "Provide component, token, and variant metadata from SkullCandy Design System for AI agents like Copilot and Cursor.",
+  "entry_point": "http://127.0.0.1:8787",
+  "tools": [
+    {
+      "name": "get_component_context",
+      "path": "/component-context",
+      "params": ["name"],
+      "description": "Get unified context (figma, code, tokens) for a component."
+    },
+    {
+      "name": "list_components",
+      "path": "/list-components",
+      "description": "List all available design system components."
+    },
+    {
+      "name": "list_tokens",
+      "path": "/list-tokens",
+      "params": ["scope"],
+      "description": "List all tokens or a filtered scope (color, spacing, typography)."
+    },
+    {
+      "name": "compare_variants",
+      "path": "/compare-variants",
+      "params": ["name"],
+      "description": "Compare Figma and code variants for a component."
+    }
+  ]
+}

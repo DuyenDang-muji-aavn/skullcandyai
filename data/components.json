@@ -1,0 +1,164 @@
+{
+  "Button": {
+    "import": "@/components/button/Button",
+    "props": {
+      "style": ["CTA", "Neutral", "Stroke"],
+      "size": ["L", "M", "S"]
+    },
+    "examples": [
+      "<Button style=\"CTA\" size=\"M\">Buy Now</Button>",
+      "<Button style=\"Neutral\" size=\"L\">Explore</Button>",
+      "<Button style=\"Stroke\" size=\"S\">Learn More</Button>"
+    ],
+    "figma": {
+      "variants": {
+        "style": ["CTA", "Neutral", "Stroke"],
+        "size": ["L", "M", "S"]
+      }
+    },
+    "tokens": [
+      "--button-gradient",
+      "--glass-blur",
+      "--spacing-md",
+      "--font-family-button"
+    ]
+  },
+  "NFTCard": {
+    "import": "@/components/nft-card/NFTCard",
+    "props": {
+      "variant": ["Default", "Unverified", "NoCountdown"]
+    },
+    "examples": [
+      "<NFTCard variant=\"Default\" price=\"0.45 ETH\" timeLeft=\"03:42\" verified />",
+      "<NFTCard variant=\"Unverified\" price=\"0.32 ETH\" timeLeft=\"12:15\" verified={false} />"
+    ],
+    "figma": {
+      "variants": {
+        "variant": ["Default", "Unverified", "NoCountdown"]
+      }
+    },
+    "tokens": [
+      "--gradient-border-main",
+      "--spacing-lg",
+      "--glass-light",
+      "--backdrop-blur-glass"
+    ]
+  },
+  "SearchBar": {
+    "import": "@/components/search-bar/SearchBar",
+    "props": {
+      "size": ["M", "L"]
+    },
+    "examples": [
+      "<SearchBar size=\"M\" placeholder=\"Search NFTs...\" />",
+      "<SearchBar size=\"L\" placeholder=\"Search...\" onSearch={(query) => console.log(query)} />"
+    ],
+    "figma": {
+      "variants": {
+        "size": ["M", "L"]
+      }
+    },
+    "tokens": [
+      "--glass-dark",
+      "--backdrop-blur-glass",
+      "--gradient-border-main",
+      "--spacing-md"
+    ]
+  },
+  "Navbar": {
+    "import": "@/components/navbar/Navbar",
+    "props": {},
+    "examples": [
+      "<Navbar />"
+    ],
+    "figma": {
+      "variants": {}
+    },
+    "tokens": [
+      "--glass-dark",
+      "--backdrop-blur-glass",
+      "--spacing-lg",
+      "--font-family-button"
+    ]
+  },
+  "Cart": {
+    "import": "@/components/cart/Cart",
+    "props": {},
+    "examples": [
+      "<Cart items={cartItems} />"
+    ],
+    "figma": {
+      "variants": {}
+    },
+    "tokens": [
+      "--glass-light",
+      "--backdrop-blur-glass",
+      "--spacing-md",
+      "--gradient-border-subtle"
+    ]
+  },
+  "SectionHeading": {
+    "import": "@/components/section-heading/SectionHeading",
+    "props": {
+      "align": ["center", "left"]
+    },
+    "examples": [
+      "<SectionHeading title=\"Trending NFTs\" description=\"Discover the hottest collections\" align=\"center\" />",
+      "<SectionHeading title=\"Featured\" description=\"Handpicked by our team\" align=\"left\" />"
+    ],
+    "figma": {
+      "variants": {
+        "align": ["center", "left"]
+      }
+    },
+    "tokens": [
+      "--font-family-title",
+      "--font-family-body",
+      "--spacing-xl"
+    ]
+  },
+  "NFTGrid": {
+    "import": "@/components/nft-grid/NFTGrid",
+    "props": {},
+    "examples": [
+      "<NFTGrid title=\"Featured NFTs\" description=\"Top picks\" showSearch>{children}</NFTGrid>"
+    ],
+    "figma": {
+      "variants": {}
+    },
+    "tokens": [
+      "--spacing-xl",
+      "--spacing-lg"
+    ]
+  },
+  "HeroSection": {
+    "import": "@/components/hero-section/HeroSection",
+    "props": {},
+    "examples": [
+      "<HeroSection title=\"Discover NFTs\" description=\"Explore the world\" ctaLabel=\"Get Started\" />"
+    ],
+    "figma": {
+      "variants": {}
+    },
+    "tokens": [
+      "--font-family-title",
+      "--spacing-xl",
+      "--button-gradient"
+    ]
+  },
+  "Footer": {
+    "import": "@/components/footer/Footer",
+    "props": {},
+    "examples": [
+      "<Footer />"
+    ],
+    "figma": {
+      "variants": {}
+    },
+    "tokens": [
+      "--glass-dark",
+      "--backdrop-blur-glass",
+      "--spacing-lg"
+    ]
+  }
+}

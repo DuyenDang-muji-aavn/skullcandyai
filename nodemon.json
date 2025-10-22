@@ -1,0 +1,11 @@
+{
+  "execMap": {
+    "ts": "ts-node"
+  },
+  "watch": ["scripts/mcp"],
+  "ext": "ts,json",
+  "ignore": ["node_modules", "dist"],
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

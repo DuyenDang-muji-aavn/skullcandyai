@@ -5,6 +5,27 @@
 
 ---
 
+## 📁 Directory Structure
+
+```
+scripts/
+├── README.md                    # This file
+├── download-assets.js           # Download images from Figma MCP
+├── upload-to-cdn.sh            # Upload to Cloudinary CDN
+├── update-entities.js          # Update database with CDN URLs
+├── sync-entity-data.js         # Sync names/prices/metadata
+├── download-results.json       # Latest download results
+├── cdn-urls.json               # Latest CDN URLs
+├── update-response.json        # Latest API response
+├── mcp/                        # MCP server implementation
+│   ├── mcp-unified-server.ts   # Unified MCP + REST server
+│   ├── helpers/                # Data loaders
+│   └── routes/                 # (legacy, not used in unified)
+└── .archive/                   # Old/deprecated scripts
+```
+
+---
+
 ## Active Scripts
 
 ### Asset Management Workflow
