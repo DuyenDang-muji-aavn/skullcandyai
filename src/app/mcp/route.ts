@@ -16,13 +16,16 @@ export async function HEAD() {
 }
 
 export async function GET() {
+  // Return MCP protocol info on GET requests
   return NextResponse.json({
-    endpoints: [
-      '/mcp/list-components',
-      '/mcp/get-component-context',
-      '/mcp/list-tokens',
-      '/mcp/compare-variants',
-    ],
+    jsonrpc: '2.0',
+    result: {
+      protocol: '2025-03-26',
+      capabilities: {
+        tools: {},
+      },
+    },
+    id: null,
   });
 }
 
@@ -40,11 +43,7 @@ export async function POST(request: NextRequest) {
             jsonrpc: '2.0',
             id: body.id,
             result: {
-              protocolVersion: '0.1.0',
-              serverInfo: {
-                name: 'skullcandy-mcp-server',
-                version: '0.1.0',
-              },
+              protocol: '2025-03-26',
               capabilities: {
                 tools: {},
               },
