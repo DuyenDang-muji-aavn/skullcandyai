@@ -1,20 +1,14 @@
 {
   "version": 2,
   "functions": {
-    "api/mcp.ts": {
+    "mcp/*.ts": {
       "maxDuration": 60,
       "memory": 1024
     }
   },
-  "rewrites": [
-    {
-      "source": "/mcp",
-      "destination": "/api/mcp"
-    }
-  ],
   "headers": [
     {
-      "source": "/api/mcp",
+      "source": "/mcp",
       "headers": [
         {
           "key": "Content-Type",

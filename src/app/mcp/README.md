@@ -5,15 +5,15 @@ Next.js API routes for Model Context Protocol (MCP) server integration.
 ## 🚀 Endpoints
 
 ### 1. Main MCP Endpoint
-**GET** `/api/mcp`
+**GET** `/mcp`
 - Returns list of available endpoints
 
-**POST** `/api/mcp`
+**POST** `/mcp`
 - Handles MCP protocol JSON-RPC messages
 - Supports `initialize`, `tools/list`, `tools/call` methods
 
 ### 2. List Components
-**GET** `/api/mcp/list-components`
+**GET** `/mcp/list-components`
 
 **Response:**
 ```json
@@ -32,7 +32,7 @@ Next.js API routes for Model Context Protocol (MCP) server integration.
 
 **Example:**
 ```bash
-curl "http://localhost:3002/api/mcp/get-component-context?name=Button"
+curl "http://localhost:3000/mcp/get-component-context?name=Button"
 ```
 
 **Response:**
@@ -57,7 +57,7 @@ curl "http://localhost:3002/api/mcp/get-component-context?name=Button"
 
 **Example:**
 ```bash
-curl "http://localhost:3002/api/mcp/list-tokens?scope=color,spacing"
+curl "http://localhost:3000/mcp/list-tokens?scope=color,spacing"
 ```
 
 **Response:**
@@ -76,7 +76,7 @@ curl "http://localhost:3002/api/mcp/list-tokens?scope=color,spacing"
 
 **Example:**
 ```bash
-curl "http://localhost:3002/api/mcp/compare-variants?name=Button"
+curl "http://localhost:3000/mcp/compare-variants?name=Button"
 ```
 
 **Response:**
@@ -111,19 +111,19 @@ pnpm dev
 **Test all endpoints:**
 ```bash
 # List components
-curl "http://localhost:3002/api/mcp/list-components" | jq .
+curl "http://localhost:3000/mcp/list-components" | jq .
 
 # Get component context
-curl "http://localhost:3002/api/mcp/get-component-context?name=Button" | jq .
+curl "http://localhost:3000/mcp/get-component-context?name=Button" | jq .
 
 # List tokens
-curl "http://localhost:3002/api/mcp/list-tokens?scope=color" | jq .
+curl "http://localhost:3000/mcp/list-tokens?scope=color" | jq .
 
 # Compare variants
-curl "http://localhost:3002/api/mcp/compare-variants?name=Button" | jq .
+curl "http://localhost:3000/mcp/compare-variants?name=Button" | jq .
 
 # Test MCP protocol
-curl -X POST "http://localhost:3002/api/mcp" \
+curl -X POST "http://localhost:3000/mcp" \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}' | jq .
 ```
@@ -132,10 +132,10 @@ curl -X POST "http://localhost:3002/api/mcp" \
 
 Once deployed to Vercel, the API will be available at:
 ```
-https://skullcandyai-lnmu.vercel.app/api/mcp/list-components
-https://skullcandyai-lnmu.vercel.app/api/mcp/get-component-context?name=Button
-https://skullcandyai-lnmu.vercel.app/api/mcp/list-tokens
-https://skullcandyai-lnmu.vercel.app/api/mcp/compare-variants?name=Button
+https://skullcandyai-lnmu.vercel.app/mcp/list-components
+https://skullcandyai-lnmu.vercel.app/mcp/get-component-context?name=Button
+https://skullcandyai-lnmu.vercel.app/mcp/list-tokens
+https://skullcandyai-lnmu.vercel.app/mcp/compare-variants?name=Button
 ```
 
 ## 🔧 VS Code MCP Configuration
@@ -155,7 +155,7 @@ Update your `mcp.json`:
 ## 📁 File Structure
 
 ```
-src/app/api/mcp/
+src/app/mcp/
 ├── route.ts                      # Main MCP endpoint (GET/POST)
 ├── list-components/
 │   └── route.ts                  # List all components

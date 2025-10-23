@@ -9,10 +9,10 @@ export const maxDuration = 60;
 export async function GET() {
   return NextResponse.json({
     endpoints: [
-      '/api/mcp/list-components',
-      '/api/mcp/get-component-context',
-      '/api/mcp/list-tokens',
-      '/api/mcp/compare-variants',
+      '/mcp/list-components',
+      '/mcp/get-component-context',
+      '/mcp/list-tokens',
+      '/mcp/compare-variants',
     ],
   });
 }
