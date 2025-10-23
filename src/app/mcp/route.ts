@@ -6,6 +6,15 @@ import tokensData from '@/../../data/tokens.json';
 export const runtime = 'edge';
 export const maxDuration = 60;
 
+export async function HEAD() {
+  return new NextResponse(null, {
+    headers: {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+    },
+  });
+}
+
 export async function GET() {
   return NextResponse.json({
     endpoints: [
