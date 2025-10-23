@@ -18,6 +18,7 @@
     "mcp:test": "node scripts/mcp/test-server.js"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.1",
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
