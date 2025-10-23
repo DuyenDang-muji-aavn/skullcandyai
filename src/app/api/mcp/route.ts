@@ -98,37 +98,112 @@ export async function POST(request: NextRequest) {
         case 'tools/call':
           const { name, arguments: args } = params;
           
-          // Proxy to the appropriate endpoint
-          const baseUrl = request.url.replace('/api/mcp', '/api/mcp');
-          let endpointUrl = '';
+          // Import data directly instead of fetching to avoid loops
+          const componentsData = await import('@/../../data/components.json');
+          const tokensData = await import('@/../../data/tokens.json');
+          
+          let toolResult: any;
           
           switch (name) {
-            case 'list_components':
-              endpointUrl = `${baseUrl}/list-components`;
+            case 'list_components': {
+              const components = Object.keys(componentsData.default);
+              toolResult = {
+                meta: { version: '0.1.0', source: 'skullcandy-mcp' },
+                data: { components, count: components.length },
+                status: 'ok',
+              };
               break;
-            case 'get_component_context':
-              endpointUrl = `${baseUrl}/get-component-context?name=${args.name}`;
+            }
+            case 'get_component_context': {
+              const componentName = args?.name;
+              if (!componentName) {
+                return NextResponse.json({
+                  jsonrpc: '2.0',
+                  id: body.id,
+                  error: { code: -32602, message: 'Missing parameter: name' },
+                });
+              }
+              const componentInfo = (componentsData.default as any)[componentName];
+              if (!componentInfo) {
+                return NextResponse.json({
+                  jsonrpc: '2.0',
+                  id: body.id,
+                  error: { code: -32602, message: `Component '${componentName}' not found` },
+                });
+              }
+              toolResult = {
+                meta: { version: '0.1.0', source: 'skullcandy-mcp' },
+                data: {
+                  component: {
+                    name: componentName,
+                    import: componentInfo.import,
+                    props: componentInfo.props,
+                    examples: componentInfo.examples,
+                    figma: componentInfo.figma,
+                  },
+                  tokens: {},
+                },
+              };
               break;
-            case 'list_tokens':
-              endpointUrl = `${baseUrl}/list-tokens${args.scope ? `?scope=${args.scope}` : ''}`;
+            }
+            case 'list_tokens': {
+              const scope = args?.scope;
+              let filteredTokens: any = tokensData.default;
+              if (scope) {
+                const scopes = scope.split(',').map((s: string) => s.trim().toLowerCase());
+                filteredTokens = Object.fromEntries(
+                  Object.entries(tokensData.default).filter(([key]) => {
+                    const tokenKey = key.toLowerCase();
+                    return scopes.some((s: string) => tokenKey.includes(s));
+                  })
+                );
+              }
+              toolResult = {
+                meta: { version: '0.1.0', source: 'skullcandy-mcp' },
+                data: { tokens: filteredTokens, count: Object.keys(filteredTokens).length },
+              };
               break;
-            case 'compare_variants':
-              endpointUrl = `${baseUrl}/compare-variants?name=${args.name}`;
+            }
+            case 'compare_variants': {
+              const componentName = args?.name;
+              if (!componentName) {
+                return NextResponse.json({
+                  jsonrpc: '2.0',
+                  id: body.id,
+                  error: { code: -32602, message: 'Missing parameter: name' },
+                });
+              }
+              const componentInfo = (componentsData.default as any)[componentName];
+              if (!componentInfo) {
+                return NextResponse.json({
+                  jsonrpc: '2.0',
+                  id: body.id,
+                  error: { code: -32602, message: `Component '${componentName}' not found` },
+                });
+              }
+              const figmaVariants = componentInfo.figma?.variants || {};
+              const codeProps = componentInfo.props || {};
+              const comparison: any = {};
+              const allProps = new Set([...Object.keys(figmaVariants), ...Object.keys(codeProps)]);
+              allProps.forEach((prop) => {
+                const figmaValues = figmaVariants[prop] || [];
+                const codeValues = codeProps[prop] || [];
+                const match = JSON.stringify(figmaValues.sort()) === JSON.stringify(codeValues.sort());
+                comparison[prop] = { figma: figmaValues, code: codeValues, match };
+              });
+              toolResult = {
+                meta: { version: '0.1.0', source: 'skullcandy-mcp' },
+                data: { component: componentName, comparison },
+              };
               break;
+            }
             default:
               return NextResponse.json({
                 jsonrpc: '2.0',
                 id: body.id,
-                error: {
-                  code: -32601,
-                  message: `Unknown tool: ${name}`,
-                },
+                error: { code: -32601, message: `Unknown tool: ${name}` },
               });
           }
-          
-          // Fetch from the endpoint
-          const response = await fetch(endpointUrl);
-          const data = await response.json();
           
           return NextResponse.json({
             jsonrpc: '2.0',
@@ -137,7 +212,7 @@ export async function POST(request: NextRequest) {
               content: [
                 {
                   type: 'text',
-                  text: JSON.stringify(data, null, 2),
+                  text: JSON.stringify(toolResult, null, 2),
                 },
               ],
             },
