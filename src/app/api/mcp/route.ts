@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import componentsData from '@/../../data/components.json';
 import tokensData from '@/../../data/tokens.json';
 
+// Configure for Vercel Edge Runtime for better performance
+export const runtime = 'edge';
+export const maxDuration = 60;
+
 export async function GET() {
   return NextResponse.json({
     endpoints: [
