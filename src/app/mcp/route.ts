@@ -6,9 +6,25 @@ import tokensData from '@/../../data/tokens.json';
 export const runtime = 'edge';
 export const maxDuration = 60;
 
+// CORS headers for ChatGPT and other clients
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Max-Age': '86400',
+};
+
+export async function OPTIONS() {
+  return new NextResponse(null, {
+    status: 204,
+    headers: corsHeaders,
+  });
+}
+
 export async function HEAD() {
   return new NextResponse(null, {
     headers: {
+      ...corsHeaders,
       'Content-Type': 'application/json',
       'Cache-Control': 'no-cache, no-store, must-revalidate',
     },
@@ -17,16 +33,21 @@ export async function HEAD() {
 
 export async function GET() {
   // Return MCP protocol info on GET requests
-  return NextResponse.json({
-    jsonrpc: '2.0',
-    result: {
-      protocol: '2025-03-26',
-      capabilities: {
-        tools: {},
+  return NextResponse.json(
+    {
+      jsonrpc: '2.0',
+      result: {
+        protocol: '2025-03-26',
+        capabilities: {
+          tools: {},
+        },
       },
+      id: null,
     },
-    id: null,
-  });
+    {
+      headers: corsHeaders,
+    }
+  );
 }
 
 export async function POST(request: NextRequest) {
@@ -39,23 +60,27 @@ export async function POST(request: NextRequest) {
       
       switch (method) {
         case 'initialize':
-          return NextResponse.json({
-            jsonrpc: '2.0',
-            id: body.id,
-            result: {
-              protocol: '2025-03-26',
-              capabilities: {
-                tools: {},
+          return NextResponse.json(
+            {
+              jsonrpc: '2.0',
+              id: body.id,
+              result: {
+                protocol: '2025-03-26',
+                capabilities: {
+                  tools: {},
+                },
               },
             },
-          });
+            { headers: corsHeaders }
+          );
           
         case 'tools/list':
-          return NextResponse.json({
-            jsonrpc: '2.0',
-            id: body.id,
-            result: {
-              tools: [
+          return NextResponse.json(
+            {
+              jsonrpc: '2.0',
+              id: body.id,
+              result: {
+                tools: [
                 {
                   name: 'list_components',
                   description: 'List all available design system components',
@@ -107,7 +132,9 @@ export async function POST(request: NextRequest) {
                 },
               ],
             },
-          });
+          },
+          { headers: corsHeaders }
+          );
           
         case 'tools/call':
           const { name, arguments: args } = params;
@@ -127,19 +154,25 @@ export async function POST(request: NextRequest) {
             case 'get_component_context': {
               const componentName = args?.name;
               if (!componentName) {
-                return NextResponse.json({
-                  jsonrpc: '2.0',
-                  id: body.id,
-                  error: { code: -32602, message: 'Missing parameter: name' },
-                });
+                return NextResponse.json(
+                  {
+                    jsonrpc: '2.0',
+                    id: body.id,
+                    error: { code: -32602, message: 'Missing parameter: name' },
+                  },
+                  { headers: corsHeaders }
+                );
               }
               const componentInfo = (componentsData as any)[componentName];
               if (!componentInfo) {
-                return NextResponse.json({
-                  jsonrpc: '2.0',
-                  id: body.id,
-                  error: { code: -32602, message: `Component '${componentName}' not found` },
-                });
+                return NextResponse.json(
+                  {
+                    jsonrpc: '2.0',
+                    id: body.id,
+                    error: { code: -32602, message: `Component '${componentName}' not found` },
+                  },
+                  { headers: corsHeaders }
+                );
               }
               toolResult = {
                 meta: { version: '0.1.0', source: 'skullcandy-mcp' },
@@ -177,19 +210,25 @@ export async function POST(request: NextRequest) {
             case 'compare_variants': {
               const componentName = args?.name;
               if (!componentName) {
-                return NextResponse.json({
-                  jsonrpc: '2.0',
-                  id: body.id,
-                  error: { code: -32602, message: 'Missing parameter: name' },
-                });
+                return NextResponse.json(
+                  {
+                    jsonrpc: '2.0',
+                    id: body.id,
+                    error: { code: -32602, message: 'Missing parameter: name' },
+                  },
+                  { headers: corsHeaders }
+                );
               }
               const componentInfo = (componentsData as any)[componentName];
               if (!componentInfo) {
-                return NextResponse.json({
-                  jsonrpc: '2.0',
-                  id: body.id,
-                  error: { code: -32602, message: `Component '${componentName}' not found` },
-                });
+                return NextResponse.json(
+                  {
+                    jsonrpc: '2.0',
+                    id: body.id,
+                    error: { code: -32602, message: `Component '${componentName}' not found` },
+                  },
+                  { headers: corsHeaders }
+                );
               }
               const figmaVariants = componentInfo.figma?.variants || {};
               const codeProps = componentInfo.props || {};
@@ -215,36 +254,45 @@ export async function POST(request: NextRequest) {
               });
           }
           
-          return NextResponse.json({
-            jsonrpc: '2.0',
-            id: body.id,
-            result: {
-              content: [
-                {
-                  type: 'text',
-                  text: JSON.stringify(toolResult, null, 2),
-                },
-              ],
+          return NextResponse.json(
+            {
+              jsonrpc: '2.0',
+              id: body.id,
+              result: {
+                content: [
+                  {
+                    type: 'text',
+                    text: JSON.stringify(toolResult, null, 2),
+                  },
+                ],
+              },
             },
-          });
+            { headers: corsHeaders }
+          );
           
         default:
-          return NextResponse.json({
-            jsonrpc: '2.0',
-            id: body.id,
-            error: {
-              code: -32601,
-              message: `Unknown method: ${method}`,
+          return NextResponse.json(
+            {
+              jsonrpc: '2.0',
+              id: body.id,
+              error: {
+                code: -32601,
+                message: `Unknown method: ${method}`,
+              },
             },
-          });
+            { headers: corsHeaders }
+          );
       }
     }
     
-    return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
+    return NextResponse.json(
+      { error: 'Invalid request' },
+      { status: 400, headers: corsHeaders }
+    );
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : 'Internal server error' },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }
