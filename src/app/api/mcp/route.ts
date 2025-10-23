@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import componentsData from '@/../../data/components.json';
+import tokensData from '@/../../data/tokens.json';
 
 export async function GET() {
   return NextResponse.json({
@@ -98,15 +100,11 @@ export async function POST(request: NextRequest) {
         case 'tools/call':
           const { name, arguments: args } = params;
           
-          // Import data directly instead of fetching to avoid loops
-          const componentsData = await import('@/../../data/components.json');
-          const tokensData = await import('@/../../data/tokens.json');
-          
           let toolResult: any;
           
           switch (name) {
             case 'list_components': {
-              const components = Object.keys(componentsData.default);
+              const components = Object.keys(componentsData);
               toolResult = {
                 meta: { version: '0.1.0', source: 'skullcandy-mcp' },
                 data: { components, count: components.length },
@@ -123,7 +121,7 @@ export async function POST(request: NextRequest) {
                   error: { code: -32602, message: 'Missing parameter: name' },
                 });
               }
-              const componentInfo = (componentsData.default as any)[componentName];
+              const componentInfo = (componentsData as any)[componentName];
               if (!componentInfo) {
                 return NextResponse.json({
                   jsonrpc: '2.0',
@@ -148,11 +146,11 @@ export async function POST(request: NextRequest) {
             }
             case 'list_tokens': {
               const scope = args?.scope;
-              let filteredTokens: any = tokensData.default;
+              let filteredTokens: any = tokensData;
               if (scope) {
                 const scopes = scope.split(',').map((s: string) => s.trim().toLowerCase());
                 filteredTokens = Object.fromEntries(
-                  Object.entries(tokensData.default).filter(([key]) => {
+                  Object.entries(tokensData).filter(([key]) => {
                     const tokenKey = key.toLowerCase();
                     return scopes.some((s: string) => tokenKey.includes(s));
                   })
@@ -173,7 +171,7 @@ export async function POST(request: NextRequest) {
                   error: { code: -32602, message: 'Missing parameter: name' },
                 });
               }
-              const componentInfo = (componentsData.default as any)[componentName];
+              const componentInfo = (componentsData as any)[componentName];
               if (!componentInfo) {
                 return NextResponse.json({
                   jsonrpc: '2.0',
